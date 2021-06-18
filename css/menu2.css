@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Shrikhand&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: "Open Sans";
+}
+
+h1{
+	font-family: Shrikhand;
+	font-size: 3em;
+}
+
+#container{
+	margin: 0 auto;
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"head head"
+	"memory memory"
+	"time attempt";
+}
+
+.head{
+	padding-top: 7em;
+	text-align: center;
+	grid-area: head;
+}
+
+
+ul{
+	margin: 0 auto;
+	justify-content: space-between;
+	height: 50vh;
+	width:50vh;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+ul li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1px;
+	background-color: #cc0000;
+	width: 10vh;
+	height: 10vh;
+}
+
+i{
+	padding: 1vh;
+	font-size: 3em;
+	color: #ffffff;
+}
+
+.tile > i{
+	opacity: 0
+}
+
+.clicked > i{
+	opacity: 1;
+	transition: 0.3s;
+}
+
+.timer, .attempts{
+	font-size: 1.5em;
+}
+
+.memory{
+	grid-area: memory;
+}
+
+.timer{
+	padding-right: 6vw ;
+	text-align: right;
+	grid-area: time;
+}
+
+.attempts{
+	padding-left: 5vw;
+	grid-area: attempt;
+}
+
+
+@media(max-width:800px){
+	
+	ul{
+		height: 48vh;
+		width: 48vh;
+	}
+
+	.timer, .attempts{
+		font-size: 1em;
+	}
+
+	.timer{
+		padding-right: 20vw ;
+	}
+	.attempts{
+		padding-left: 15vw;
+	}
+}
