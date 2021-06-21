@@ -38,7 +38,7 @@ function timer(){ //timer ist im log weil reeee
 }
 
 function game(){
-    if(attempt == 0){ //timer fängt bei erstem Klick an
+    if(attempt == 0){ //timer start at the first click. Time is only in console
         newdate = new Date();
         StartTime = Math.round(newdate.getTime()/1000);
         Time = setInterval(timer, 1000);
@@ -61,7 +61,7 @@ function game(){
                 position = '';
                 Anzahl.innerHTML = attempt;
 
-                if (attempt < 4){   //Punkte werden ausgerechnet
+                if (attempt < 4){   //Score System
                     points = points + (newpoints * multiplicator[0]);
                     pointc.innerHTML = points;
                 } else if(attempt < 9) {
@@ -101,20 +101,3 @@ function game(){
         }
     }
 };
-
-
-
-// let d = new Date();
-// let date = d.getDate();
-// let month = d.getMonth() + 1; //nur beim Monat fängt das Ding bei 0 zu zählen an
-// month < 10 ? month = '0' + month : false; //? ist eine if funktion. der : ist das else
-// let year = d.getFullYear();
-// let dateString = date + '.' + month + '.' + year
-// console.log(dateString);
-
-
-
-
-
-//console.log(d.getTime()); // Jede Milisekunde seit dem 1.1.1970 (Beginn der Unix Zeitrechnung)
-
